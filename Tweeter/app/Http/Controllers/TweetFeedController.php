@@ -38,7 +38,6 @@ class TweetFeedController extends Controller
 
         $tweet = \App\Tweet::find($request->get('user_id'));
         $tweet->delete();
-
         $result = \App\Tweet::all();
         return view ('layouts.profile', ['tweets' => $result]);
 
@@ -46,7 +45,6 @@ class TweetFeedController extends Controller
 
         function updateTweet(Request $request) {
         $tweet = \App\Tweet::find($request->get('user_id'));
-
         $result = \App\Tweet::all();
         return view ('layouts.updateTweet', ['tweets' => $result]);
 
@@ -56,24 +54,25 @@ class TweetFeedController extends Controller
     function showAllUsers () {
         if(Auth::check()) {
         $users = \App\User::all();
-        $followrelationship = \App\FollowRelationship::where('user_id', Auth::user()->id)->get();
-        return view ('layouts.allUsers', ['users' => $users, 'followrelationship' => $followrelationship]);
+        $follow_relationship = \App\FollowRelationship::where('user_id', Auth::user()->id)->get();
+        return view ('layouts.allUsers', ['users' => $users, 'follow_relationship' => $follow_relationship]);
         } else {
             return redirect('/home');
         }
 
     }
 
-    // function followUser () {
-    //     if(Auth::check()) {
-    //     $users = \App\User::all();
-    //     $follows = \App\Follows::where('followed', Auth::user()->name)->get();
-    //     return view ('layouts.allUsers', ['users' => $users, 'follows' => $follows]);
+    function showFollowUsers () {
+        if(Auth::check()) {
+        $users = \App\User::all();
+        $follow_relationship = \App\FollowRelationship::where('followed_id', Auth::user()->id)->get();
+        return view ('layouts.allUsers', ['users' => $users, 'follow_relationship' => $follow_relationship]);
 
-    //     } else {
-    //         return redirect('layouts.allUsers');
-    //     }
+        } else {
+            return redirect('layouts.allUsers');
+        }
 
-    // }
+    }
 
 }
+

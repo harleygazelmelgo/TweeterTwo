@@ -2,9 +2,9 @@
 
 @php
 
-    function checkFollowing($userToCheck, $followrelationship) {
-        foreach($followrelationship as $followrelationship) {
-            if($followrelationship->followed_id == $userToCheck) {
+    function checkFollowing($userToCheck, $follow_relationship) {
+        foreach($follow_relationship as $follow) {
+            if($follow->followed_id == $userToCheck) {
                 return true;
             }
         }
@@ -17,12 +17,12 @@
     <h1> List of Users!</h1>
         <br><br>
         @foreach ($users as $user)
-            <p> {{$user->name}} </p>
-        @if (checkFollowing($user->name, $followrelationship))
+            <p> {{$user->id}} </p>
+        @if (checkFollowing($user->id, $follow_relationship))
             <p> Already following! </p>
 
         @else
-            <form action="/followUser" method="post">
+            <form action="/followUsers" method="get">
                 @csrf
                 <input type="submit" value="Follow">
                 {{-- <input type="submit" value="Unfollow"> --}}

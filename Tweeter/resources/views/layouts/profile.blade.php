@@ -4,8 +4,11 @@
     @guest
         <p>No Tweets available for you!</p>
     @else
-        <h1>Welcome {{ Auth::user()->name }}</h1>
+        <h1>{{ Auth::user()->name }}</h1>
         <br><br>
+
+
+
         @foreach ($tweets as $tweet)
             <p><strong> {{$tweet->name}}</strong></p>
             <p>{{$tweet->content}}</p>

@@ -10,9 +10,12 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    function _profile() {
+    protected $table = 'users';
+
+    function profile() {
         return $this->hasOne('App\Profile');
     }
+
 
     function tweets() {
         return $this->hasMany('App\Tweet');

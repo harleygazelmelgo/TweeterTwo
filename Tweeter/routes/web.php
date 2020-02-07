@@ -19,6 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('userProfile', 'ProfileController@show');
+
+Route::get('userProfile/postUser', 'ProfileController@postUser');
+
+Route::get('userProfile/updateBio', 'ProfileController@updateBio');
+
 Route::get('profile', 'TweetFeedController@show');
 
 Route::post('/profile/postTweet', 'TweetFeedController@postTweet');
@@ -29,5 +35,6 @@ Route::get('/profile/updateTweet', 'TweetFeedController@updateTweet');
 
 Route::get('/showProfiles', 'TweetFeedController@showAllUsers');
 
+Route::get('/followUsers', 'TweetFeedController@showFollowUsers');
 
 
