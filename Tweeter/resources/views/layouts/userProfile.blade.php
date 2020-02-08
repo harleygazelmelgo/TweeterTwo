@@ -6,14 +6,10 @@
     @else
         <h1>{{ Auth::user()->name }}</h1>
 
-        @foreach ($profiles as $profile)
+           <p> {{ $profiles->bio }} </p>
 
-            <p>{{$profile->bio}}</p>
-
-
-
-        @if ($profile->user_id == (Auth::user()->id))
-        <form action="/userProfile/updateBio" method="get">
+        @if ($profiles->user_id == (Auth::user()->id))
+        <form action="userProfile/updateBio" method="get">
             @csrf
             <input type="hidden" name="user_id" value="{{ Auth::user()->id}}">
             <textarea name="content" rows="2" cols="30"></textarea>
@@ -23,9 +19,16 @@
 
         @endif
 
-        @endforeach
+        <br><br>
+
+            @foreach ($tweets as $tweet)
+
+                <p>{{$tweet->content}}</p>
+                <p><strong> {{$tweet->created_at}}</strong></p>
 
 
+            @endforeach
 
     @endguest
+
 @endsection

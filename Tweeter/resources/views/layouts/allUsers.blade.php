@@ -11,7 +11,17 @@
         return false;
     }
 
+    function checkFollowed($followedToCheck, $follow_relationship) {
+        foreach($follow_relationship as $follow) {
+            if($follow->followed_id  == $followedToCheck) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 @endphp
+
 
 @section('content')
     <h1> List of Users!</h1>
@@ -22,10 +32,20 @@
             <p> Already following! </p>
 
         @else
-            <form action="/followUsers" method="get">
+            <form action="/showProfiles" method="get">
                 @csrf
                 <input type="submit" value="Follow">
-                {{-- <input type="submit" value="Unfollow"> --}}
+
+            </form>
+
+        @endif
+
+        @if (checkFollowed($user->id, $follow_relationship))
+
+            <form action="/showProfiles" method="get">
+                @csrf
+                <input type="submit" value="Unfollow">
+
             </form>
 
         @endif

@@ -48,15 +48,16 @@ class TweetFeedController extends Controller
         $result = \App\Tweet::all();
         return view ('layouts.updateTweet', ['tweets' => $result]);
 
-
     }
 
     function showAllUsers () {
         if(Auth::check()) {
         $users = \App\User::all();
         $follow_relationship = \App\FollowRelationship::where('user_id', Auth::user()->id)->get();
+
         return view ('layouts.allUsers', ['users' => $users, 'follow_relationship' => $follow_relationship]);
         } else {
+
             return redirect('/home');
         }
 
@@ -65,7 +66,7 @@ class TweetFeedController extends Controller
     function showFollowUsers () {
         if(Auth::check()) {
         $users = \App\User::all();
-        $follow_relationship = \App\FollowRelationship::where('followed_id', Auth::user()->id)->get();
+        $follow_relationship = \App\FollowRelationship::where('followed_id', Auth::user()->followed_id)->get();
         return view ('layouts.allUsers', ['users' => $users, 'follow_relationship' => $follow_relationship]);
 
         } else {

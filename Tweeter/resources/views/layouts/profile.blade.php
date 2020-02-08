@@ -7,8 +7,6 @@
         <h1>{{ Auth::user()->name }}</h1>
         <br><br>
 
-
-
         @foreach ($tweets as $tweet)
             <p><strong> {{$tweet->name}}</strong></p>
             <p>{{$tweet->content}}</p>

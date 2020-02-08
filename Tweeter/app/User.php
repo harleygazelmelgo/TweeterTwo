@@ -21,6 +21,12 @@ class User extends Authenticatable
         return $this->hasMany('App\Tweet');
     }
 
+
+    function follow_relationship() {
+        return $this->hasMany('App\FollowRelationship');
+    }
+
+
     /**
      * The attributes that are mass assignable.
      *
