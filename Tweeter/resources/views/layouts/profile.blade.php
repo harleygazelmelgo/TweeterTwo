@@ -19,7 +19,7 @@
             <input type="submit" value="Delete Tweet">
             </form>
 
-            <form action="/profile/updateTweet" method="get">
+            <form action="/profile/editTweet" method="get">
                 @csrf
                 <input type="hidden" name="user_id" value="{{$tweet->id}}">
                 <input type="hidden" name="content" value="Content">

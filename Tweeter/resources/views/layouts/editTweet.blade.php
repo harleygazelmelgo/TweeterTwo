@@ -13,8 +13,9 @@
             @csrf
 
             <label for="content">Content</label>
-            <textarea name="content" rows="10" cols="50"></textarea>
             <br>
+            <textarea name="content" rows="10" cols="50"></textarea>
+            <br><br>
             <button type="submit" class="button is-link">Update</button>
         </form>
 

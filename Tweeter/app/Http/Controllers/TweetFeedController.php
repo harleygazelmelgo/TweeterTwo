@@ -43,10 +43,29 @@ class TweetFeedController extends Controller
 
     }
 
-        function updateTweet(Request $request) {
+
+    function editTweet(Request $request) {
         $tweet = \App\Tweet::find($request->get('user_id'));
+        $tweet->content = $request->content;
+
+        return view ('layouts.editTweet', ['tweets' => $tweet]);
+
+    }
+
+
+    function updateTweet(Request $request) {
+        if(Auth::check()) {
+        $tweet = \App\Tweet::find($request->get('user_id'));
+        $tweet->content = $request->content;
+        $tweet->save();
+
         $result = \App\Tweet::all();
-        return view ('layouts.updateTweet', ['tweets' => $result]);
+
+        return view ('layouts.profile', ['tweets' => $result]);
+
+        } else {
+            return redirect('/home');
+        }
 
     }
 
