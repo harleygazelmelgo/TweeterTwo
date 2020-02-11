@@ -19,5 +19,7 @@
             <button type="submit" class="button is-link">Update Bio</button>
         </form>
 
+            {{-- <a href="../profile" --}}
+
     @endguest
 @endsection

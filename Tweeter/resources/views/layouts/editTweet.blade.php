@@ -9,14 +9,17 @@
         <p>Edit Post!</p>
         <br>
 
-        <form action="/profile/updateTweet" method="get">
+        <form action="/profile/updateTweet" method="post">
             @csrf
 
-            <label for="content">Content</label>
+            <input type="hidden" name="id" value="{{$tweets->id}}">
+            <label for="content">Content: </label>
             <br>
             <textarea name="content" rows="10" cols="50"></textarea>
             <br><br>
+
             <button type="submit" class="button is-link">Update</button>
+
         </form>
 
     @endguest

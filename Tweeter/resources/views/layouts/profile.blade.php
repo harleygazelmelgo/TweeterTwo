@@ -30,7 +30,7 @@
 
         @endforeach
         <br><br>
-        <form action="/profile/postTweet" method="post">
+        <form action="/profile/postTweet" method="get">
             @csrf
             <input type="hidden" name="user_id" value="{{ Auth::user()->id}}">
             <textarea name="content" rows="10" cols="50"></textarea>

@@ -33,7 +33,7 @@ Route::get('/profile/deleteTweet', 'TweetFeedController@deleteTweet');
 
 Route::get('/profile/editTweet', 'TweetFeedController@editTweet');
 
-Route::get('/profile/updateTweet', 'TweetFeedController@updateTweet');
+Route::post('/profile/updateTweet', 'TweetFeedController@updateTweet');
 
 Route::get('/showProfiles', 'TweetFeedController@showAllUsers');
 
