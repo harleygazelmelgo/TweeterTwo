@@ -25,6 +25,7 @@ Route::get('userProfile/editBio', 'ProfileController@editBio');
 
 Route::get('userProfile/updateBio', 'ProfileController@updateBio');
 
+
 Route::get('profile', 'TweetFeedController@show');
 
 Route::get('/profile/postTweet', 'TweetFeedController@postTweet');
@@ -35,7 +36,22 @@ Route::get('/profile/editTweet', 'TweetFeedController@editTweet');
 
 Route::post('/profile/updateTweet', 'TweetFeedController@updateTweet');
 
+
+Route::post('/profile/likes', 'TweetFeedController@likesTweet');
+
+Route::post('/profile/commentsTweet', 'TweetFeedController@commentsTweet');
+
+
+
+
+
 Route::get('/showProfiles', 'TweetFeedController@showAllUsers');
+
+Route::get('/showProfiles/followUsers', 'TweetFeedController@followUsers');
+
+Route::get('/showProfiles/UnfollowUsers', 'TweetFeedController@UnfollowUsers');
+
+
 
 
 

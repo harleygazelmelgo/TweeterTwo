@@ -43,7 +43,6 @@ class TweetFeedController extends Controller
 
     }
 
-
     function editTweet(Request $request) {
         $tweet = \App\Tweet::find($request->get('user_id'));
         $tweet->content = $request->content;
@@ -51,7 +50,6 @@ class TweetFeedController extends Controller
         return view ('layouts.editTweet', ['tweets' => $tweet]);
 
     }
-
 
     function updateTweet(Request $request) {
         if(Auth::check()) {
@@ -81,17 +79,74 @@ class TweetFeedController extends Controller
 
     }
 
-    function showFollowUsers () {
+    function followUsers (Request $request) {
         if(Auth::check()) {
+        $follow_relationship = \App\FollowRelationship::find($request->id);
+        $follow_relationship = \App\FollowRelationship::where('user_id', Auth::user()->id)->where('followed_id', Auth::user()->id)->get();
+        $follow_relationship->delete();
+
         $users = \App\User::all();
-        $follow_relationship = \App\FollowRelationship::where('followed_id', Auth::user()->followed_id)->get();
         return view ('layouts.allUsers', ['users' => $users, 'follow_relationship' => $follow_relationship]);
 
         } else {
-            return redirect('layouts.allUsers');
+            return redirect('/home');
         }
 
     }
+
+    function UnfollowUsers (Request $request) {
+        if(Auth::check()) {
+        $follow_relationship = new \App\FollowRelationship();
+        $follow_relationship->followed_id = Auth::user()->id;
+        $follow_relationship->user_id = $request->followed_id;
+        $follow_relationship->save();
+
+        $users = \App\User::all();
+        return view ('layouts.allUsers', ['users' => $users, 'follow_relationship' => $follow_relationship]);
+
+        } else {
+            return redirect('/home');
+        }
+
+    }
+
+    function likesTweet(Request $request) {
+        if(Auth::check()) {
+        $likes = \App\Likes::find($request->id);
+        $likes->user_id = $request->user_id;
+        $likes->tweet_id = $request->tweet_id;
+
+
+        $result = \App\User::find(Auth::user()->id)->tweets;
+             return view ('layouts.profile', ['likes' => $likes, 'tweets' => $result]);
+
+        } else {
+            return redirect('/home');
+        }
+
+    }
+
+    function commentsTweet(Request $request) {
+        if(Auth::check()) {
+        $comments = \App\Comments::find($request->id);
+        $comments->content = $request->content;
+        $comments = $tweets->comments;
+        $comments->save();
+
+
+        $result = \App\User::find(Auth::user()->id)->tweets;
+        return view ('layouts.profile', ['comments' => $comments, 'tweets' => $result]);;
+
+        } else {
+            return view('layouts.profile');
+        }
+
+    }
+
+
+
+
+
 
 }
 

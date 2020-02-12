@@ -12,4 +12,13 @@ class Tweet extends Model
     function user() {
         return $this-belongsTo('App\User');
     }
+
+    function likes() {
+        return $this->hasMany('App\Likes');
+    }
+
+    function comments() {
+        return $this->hasMany('App\Comments');
+    }
+
 }

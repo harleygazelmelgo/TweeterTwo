@@ -9,7 +9,6 @@ use Auth;
 class ProfileController extends Controller
 {
 
-
     function show (Request $request)  {
         if(Auth::check()) {
         $profiles = \App\Profile::find(Auth::user()->id);
