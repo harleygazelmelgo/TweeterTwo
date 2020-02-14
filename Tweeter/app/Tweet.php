@@ -10,7 +10,7 @@ class Tweet extends Model
     public $timestamps = false;
 
     function user() {
-        return $this-belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 
     function likes() {

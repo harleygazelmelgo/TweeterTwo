@@ -37,19 +37,17 @@ Route::get('/profile/editTweet', 'TweetFeedController@editTweet');
 Route::post('/profile/updateTweet', 'TweetFeedController@updateTweet');
 
 
-Route::post('/profile/likes', 'TweetFeedController@likesTweet');
-
-Route::post('/profile/commentsTweet', 'TweetFeedController@commentsTweet');
-
-
-
-
-
 Route::get('/showProfiles', 'TweetFeedController@showAllUsers');
 
 Route::get('/showProfiles/followUsers', 'TweetFeedController@followUsers');
 
 Route::get('/showProfiles/UnfollowUsers', 'TweetFeedController@UnfollowUsers');
+
+
+Route::post('/profile/likes', 'TweetFeedController@likesTweet');
+
+
+Route::post('/profile/commentsTweet', 'TweetFeedController@commentsTweet');
 
 
 

@@ -8,7 +8,7 @@
         <br><br>
 
         @foreach ($likes as $like) {
-            $likes = $tweet->likes;
+
 
         }
 

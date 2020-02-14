@@ -8,7 +8,7 @@
         <br><br>
 
         @foreach ($tweets as $tweet)
-            <p><strong> {{$tweet->name}}</strong></p>
+            <p><strong> {{$tweet->user->name}}</strong></p>
             <p>{{$tweet->content}}</p>
             <p><strong> {{$tweet->created_at}}</strong></p>
 
@@ -36,10 +36,10 @@
 
 
             <br>
-            <form action="/profile" method="get">
+            <form action="/profile/commentsTweet" method="post">
             @csrf
                 <input type="hidden" name="user_id" value="{{$tweet->id}}">
-                <textarea name="content" rows="1" cols="50"></textarea>
+                <textarea name="content" rows="2" cols="30"></textarea>
             <br>
                 <input type="submit" value="Comment">
             </form>
