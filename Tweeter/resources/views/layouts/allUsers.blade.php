@@ -11,14 +11,7 @@
         return false;
     }
 
-    // function checkFollowed($followedToCheck, $follow_relationship) {
-    //     foreach($follow_relationship as $follow) {
-    //         if($follow->followed_id  == $followedToCheck) {
-    //             return true;
-    //         }
-    //     }
-    //     return false;
-    // }
+
 
 @endphp
 
@@ -28,25 +21,20 @@
         <br><br>
         @foreach ($users as $user)
             <p> {{$user->name}} </p>
-        @if (checkFollowing($user->id, $follow_relationship))
+        @if (checkFollowing($user->id, Auth::user()->follow_relationship))
             <p> Already following! </p>
-
-        @else
-            <form action="/showProfiles/followUsers" method="get">
-                @csrf
-                <input type="hidden" name="user_id" value="{{$user->id}}">
-                <input type="submit" value="Follow">
-
-            </form>
-
-        @endif
-
-        @if (checkFollowing($user->id, $follow_relationship))
-
             <form action="/showProfiles/UnfollowUsers" method="get">
                 @csrf
                 <input type="hidden" name="user_id" value="{{$user->id}}">
                 <input type="submit" value="Unfollow">
+
+            </form>
+
+        @else
+            <form action="/showProfiles/followUsers" method="get">
+                @csrf
+                <input type="hidden" name="followed_id" value="{{$user->id}}">
+                <input type="submit" value="Follow">
 
             </form>
 

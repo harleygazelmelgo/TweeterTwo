@@ -81,32 +81,20 @@ class TweetFeedController extends Controller
 
     function followUsers (Request $request) {
         if(Auth::check()) {
-        $follow_relationship = \App\FollowRelationship::find($request->id);
-        $follow_relationship = \App\FollowRelationship::where('user_id', Auth::user()->id)->where('followed_id', Auth::user()->id)->get();
-        $follow_relationship->delete();
-
-        $users = \App\User::all();
-        return view ('layouts.allUsers', ['users' => $users, 'follow_relationship' => $follow_relationship]);
-
-        } else {
-            return redirect('/home');
+            $follow_relationship = new \App\FollowRelationship();
+            $follow_relationship->followed_id = $request->followed_id;
+            $follow_relationship->user_id = Auth::user()->id;
+            $follow_relationship->save();
+            return redirect('/showProfiles');
         }
 
     }
 
     function UnfollowUsers (Request $request) {
         if(Auth::check()) {
-        $follow_relationship = new \App\FollowRelationship();
-        $follow_relationship->followed_id = Auth::user()->id;
-        $follow_relationship->user_id = $request->followed_id;
-        $follow_relationship->save();
-
-        $users = \App\User::all();
-        return view ('layouts.allUsers', ['users' => $users, 'follow_relationship' => $follow_relationship]);
-
-        } else {
-            return redirect('/home');
-        }
+        $follow_relationship = \App\FollowRelationship::where('user_id', Auth::user()->id)->where('followed_id', $request->user_id)->get();
+        $follow_relationship[0]->delete();
+        return redirect('/showProfiles');
 
     }
 
@@ -126,22 +114,22 @@ class TweetFeedController extends Controller
 
     }
 
-    function commentsTweet(Request $request) {
-        if(Auth::check()) {
-        $comments = \App\Comments::find($request->id);
-        $comments->content = $request->content;
-        $comments = $tweets->comments;
-        $comments->save();
+    // function commentsTweet(Request $request) {
+    //     if(Auth::check()) {
+    //     $comments = \App\Comments::find($request->id);
+    //     $comments->content = $request->content;
+    //     $comments = $tweets->comments;
+    //     $comments->save();
 
 
-        $result = \App\User::find(Auth::user()->id)->tweets;
-        return view ('layouts.profile', ['comments' => $comments, 'tweets' => $result]);;
+    //     $result = \App\User::find(Auth::user()->id)->tweets;
+    //     return view ('layouts.profile', ['comments' => $comments, 'tweets' => $result]);;
 
-        } else {
-            return view('layouts.profile');
-        }
+    //     } else {
+    //         return view('layouts.profile');
+    //     }
 
-    }
+    // }
 
 
 
