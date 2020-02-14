@@ -44,10 +44,16 @@ Route::get('/showProfiles/followUsers', 'TweetFeedController@followUsers');
 Route::get('/showProfiles/UnfollowUsers', 'TweetFeedController@UnfollowUsers');
 
 
-Route::post('/profile/likes', 'TweetFeedController@likesTweet');
+// Route::post('/profile/likes', 'TweetFeedController@likesTweet');
 
 
 Route::post('/profile/commentsTweet', 'TweetFeedController@commentsTweet');
+
+Route::get('/profile/DeleteCommentsTweet', 'TweetFeedController@DeleteCommentsTweet');
+
+Route::post('/profile/EditCommentsTweet', 'TweetFeedController@EditCommentsTweet');
+
+
 
 
 

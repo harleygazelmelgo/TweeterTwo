@@ -34,23 +34,35 @@
             </form>
             <br>
 
-
-            <br>
-            <form action="/profile/commentsTweet" method="post">
-            @csrf
-                <input type="hidden" name="user_id" value="{{$tweet->id}}">
-                <textarea name="content" rows="2" cols="30"></textarea>
-            <br>
-                <input type="submit" value="Comment">
-            </form>
-
             @endif
 
+            @foreach ($tweet->comments as $comments)
+                <p><strong> {{$comments->user->name}}</strong></p>
+                <p>{{$comments->content}}</p>
+
+            @endforeach
+
+            <br>
+            <form action="/profile" method="post">
+                @csrf
+                <input type="hidden" name="tweet_id" value="{{$tweet->id}}">
+             <textarea name="content" rows="2" cols="30"></textarea>
+            <br>
+            <input type="submit" value="Comment">
+            </form>
+
+            <form action="/profile/DeleteCommentsTweet" method="get">
+                @csrf
+                <input type="hidden" name="tweet_id" value="{{$tweet->id}}">
+                <input type="submit" value="DeleteComment">
+            </form>
 
 
         @endforeach
 
         <br><br>
+
+
         <form action="/profile/postTweet" method="get">
             @csrf
             <input type="hidden" name="user_id" value="{{ Auth::user()->id}}">

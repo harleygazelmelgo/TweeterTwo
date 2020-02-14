@@ -121,18 +121,31 @@ class TweetFeedController extends Controller
         if(Auth::check()) {
         $comments = new \App\Comments();
         $comments->tweet_id = $request->tweet_id;
-        $comments->tweets->comments;
+        $comments->content = $request->content;
+        $comments->user_id = Auth::user()->id;
         $comments->save();
 
 
         $result = \App\User::find(Auth::user()->id)->tweets;
         return view ('layouts.profile', ['comments' => $comments, 'tweets' => $result]);;
 
-        } else {
-            return view('layouts.profile');
         }
 
     }
+
+    function DeleteCommentsTweet(Request $request) {
+
+        $comments = \App\Comments::find($request->get('user_id'));
+        $comments->delete();
+        $result = \App\Comments::all();
+        return view ('layouts.profile', ['comments' => $result]);
+
+    }
+
+
+
+
+
 
 
 
