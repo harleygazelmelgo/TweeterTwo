@@ -100,22 +100,22 @@ class TweetFeedController extends Controller
 
     }
 
-    // function likesTweet(Request $request) {
-    //     if(Auth::check()) {
-    //     $likes = \App\Likes::find($request->id);
-    //     $likes->user_id = Auth::user()->id;
-    //     $likes->tweet_id = $request->tweet_id;
-    //     $likes->save();
+    function likesTweet(Request $request) {
+        if(Auth::check()) {
+        $likes = \App\Likes::find($request->id);
+        $likes->user_id = Auth::user()->id;
+        $likes->tweet_id = $request->tweet_id;
+        $likes->save();
 
 
-    //     $result = \App\User::find(Auth::user()->id)->tweets;
-    //          return view ('layouts.profile', ['likes' => $likes, 'tweets' => $result]);
+        $result = \App\User::find(Auth::user()->id)->tweets;
+             return view ('layouts.profile', ['likes' => $likes, 'tweets' => $result]);
 
-    //     } else {
-    //         return redirect('/home');
-    //     }
+        } else {
+            return redirect('/home');
+        }
 
-    // }
+    }
 
     function commentsTweet(Request $request) {
         if(Auth::check()) {

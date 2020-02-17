@@ -60,3 +60,7 @@ Route::post('/profile/EditCommentsTweet', 'TweetFeedController@EditCommentsTweet
 
 
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

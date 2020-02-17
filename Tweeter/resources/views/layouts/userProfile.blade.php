@@ -6,7 +6,11 @@
     @else
         <h1>{{ Auth::user()->name }}</h1>
 
+           <p> {{ $profiles->username }} </p>
+           <p> {{ $profiles->location }} </p>
+           <br>
            <p> {{ $profiles->bio }} </p>
+
 {{--
         @if ($profiles->user_id == (Auth::user()->id)) --}}
         <form action="/userProfile/editBio" method="get">

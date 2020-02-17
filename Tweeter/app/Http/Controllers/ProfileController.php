@@ -25,7 +25,10 @@ class ProfileController extends Controller
     function editBio(Request $request) {
 
             $profiles = \App\Profile::find(Auth::user()->id);
+            $profiles->username = $request->username;
+            $profiles->location = $request->location;
             $profiles->bio = $request->content;
+
 
             return view ('layouts.editBio', ['profiles' => $profiles]);
 
@@ -36,7 +39,10 @@ class ProfileController extends Controller
         if(Auth::check()) {
 
         $profiles = \App\Profile::find(Auth::user()->id);
+        $profiles->username = $request->username;
+        $profiles->location = $request->location;
         $profiles->bio = $request->content;
+
         $profiles->save();
 
         $result = \App\User::find(Auth::user()->id)->tweets;
