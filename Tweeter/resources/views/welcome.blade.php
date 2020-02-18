@@ -8,7 +8,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Laravel {{ app()->version() }}</title>
+        <title> Tweeter {{ app()->version() }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -18,9 +18,7 @@
 
         <!-- Styles -->
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
 
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
         <style>
             html, body {
@@ -94,7 +92,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ ('/home') }}">Home</a>
                     @else
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
@@ -106,7 +104,6 @@
             <div class="content">
                 <div class="title m-b-md">
                     <h1 class="title is-1"> TWEETER </h1>
-
                     <h2 class="subtitle is-6"> See what's happening in the world right now. </h2>
 
 

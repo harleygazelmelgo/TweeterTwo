@@ -13,9 +13,9 @@ class TweetFeedController extends Controller
     function show() {
         if(Auth::check()) {
             $result = \App\Tweet::all();
-            return view ('layouts.profile', ['tweets' => $result]);
+            return view ('layouts.tweetfeeds', ['tweets' => $result]);
         } else {
-            return view('layouts.profile');
+            return view('layouts.tweetfeeds');
         }
     }
 
@@ -24,12 +24,13 @@ class TweetFeedController extends Controller
         $tweet = new \App\Tweet;
         $tweet->user_id = $request->user_id;
         $tweet->content = $request->content;
+        $tweet->created_at = $request->created_at;
         $tweet->save();
 
         $result = \App\Tweet::all();
-        return view ('layouts.profile', ['tweets' => $result]);
+        return view ('layouts.tweetfeeds', ['tweets' => $result]);
     } else {
-        return view('layouts.profile');
+        return view('layouts.tweetfeeds');
     }
 
     }
@@ -39,7 +40,7 @@ class TweetFeedController extends Controller
         $tweet = \App\Tweet::find($request->get('user_id'));
         $tweet->delete();
         $result = \App\Tweet::all();
-        return view ('layouts.profile', ['tweets' => $result]);
+        return view ('layouts.tweetfeeds', ['tweets' => $result]);
 
     }
 
@@ -58,7 +59,7 @@ class TweetFeedController extends Controller
         $tweet->save();
 
         $result = \App\Tweet::all();
-        return view ('layouts.profile', ['tweets' => $result]);
+        return view ('layouts.tweetfeeds', ['tweets' => $result]);
 
         } else {
             return redirect('/home');
@@ -85,7 +86,7 @@ class TweetFeedController extends Controller
             $follow_relationship->followed_id = $request->followed_id;
             $follow_relationship->user_id = Auth::user()->id;
             $follow_relationship->save();
-            return redirect('/showProfiles');
+            return redirect('/followerprofiles');
         }
 
     }
@@ -94,7 +95,7 @@ class TweetFeedController extends Controller
         if(Auth::check()) {
         $follow_relationship = \App\FollowRelationship::where('user_id', Auth::user()->id)->where('followed_id', $request->user_id)->get();
         $follow_relationship[0]->delete();
-        return redirect('/showProfiles');
+        return redirect('/followerprofiles');
 
         }
 
@@ -109,7 +110,7 @@ class TweetFeedController extends Controller
 
 
         $result = \App\User::find(Auth::user()->id)->tweets;
-             return view ('layouts.profile', ['likes' => $likes, 'tweets' => $result]);
+             return view ('layouts.tweetfeeds', ['likes' => $likes, 'tweets' => $result]);
 
         } else {
             return redirect('/home');
@@ -127,18 +128,21 @@ class TweetFeedController extends Controller
 
 
         $result = \App\User::find(Auth::user()->id)->tweets;
-        return view ('layouts.profile', ['comments' => $comments, 'tweets' => $result]);;
+        return view ('layouts.tweetfeeds', ['comments' => $comments, 'tweets' => $result]);
 
+        } else {
+
+            return redirect('/home');
         }
 
     }
 
     function DeleteCommentsTweet(Request $request) {
 
-        $comments = \App\Comments::find($request->get('user_id'));
+        $comments = \App\Comments::find($request->get('tweet_id'));
         $comments->delete();
         $result = \App\Comments::all();
-        return view ('layouts.profile', ['comments' => $result]);
+        return view ('layouts.tweetfeeds', ['comments' => $result]);
 
     }
 

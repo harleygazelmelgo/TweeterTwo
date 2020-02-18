@@ -12,29 +12,42 @@
     }
 
 
-
 @endphp
 
 
-@section('content')
-    <h1> List of Users!</h1>
-        <br><br>
+
+    @section('content')
+    <br>
+
+<div class="container">
+    <div class="box" style="background-color:#85B8CB">
+        <h1 class="title is-5">Followers</h1>
+
+        <div class="box-heading" >
+        <br>
+
         @foreach ($users as $user)
-            <p> {{$user->name}} </p>
+            <br>
+            <p><strong> {{$user->name}} </strong></p>
+            <p><strong> {{$user->profile->username}} </strong></p>
+
+
         @if (checkFollowing($user->id, Auth::user()->follow_relationship))
             <p> Already following! </p>
-            <form action="/showProfiles/UnfollowUsers" method="get">
+            <form action="/followerprofiles/UnfollowUsers" method="get">
                 @csrf
                 <input type="hidden" name="user_id" value="{{$user->id}}">
-                <input type="submit" value="Unfollow">
+                <input type="submit" class="pull-right btn btn-small" value="Unfollow">
+                <br>
 
             </form>
 
         @else
-            <form action="/showProfiles/followUsers" method="get">
+            <form action="/followerprofiles/followUsers" method="get">
                 @csrf
                 <input type="hidden" name="followed_id" value="{{$user->id}}">
-                <input type="submit" value="Follow">
+                <input type="submit" class="pull-right btn btn-small" value="Follow">
+                <br>
 
             </form>
 
@@ -42,4 +55,32 @@
 
         @endforeach
 
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="block">
+    <nav class="pagination">
+        <a href="" class="pagination-previous" disabled>Previous</a>
+        <a href="" class="pagination-next">Next Page</a>
+        <ul class="pagination-list">
+            <li>
+                <a href="" class="pagination-link is current">1</a>
+            </li>
+            <li>
+                <a href="" class="pagination-link is current">2</a>
+            </li>
+            <li>
+                <a href="" class="pagination-link is current">3</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+
 @endsection
+

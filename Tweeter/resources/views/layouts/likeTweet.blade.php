@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@php
+    $likeCount = count(\App\Tweet::find($tweet->id)->like);
+
+@endphp
+
+
 @section('content')
     @guest
         <p>No Tweets available for you!</p>
@@ -8,6 +14,9 @@
         <br><br>
 
         @foreach ($likes as $like) {
+            <p><strong> {{$like->user->name}}</strong></p>
+
+
 
 
         }

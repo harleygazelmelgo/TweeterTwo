@@ -14,40 +14,40 @@ class ProfileController extends Controller
         $profiles = \App\Profile::find(Auth::user()->id);
         $result = \App\User::find(Auth::user()->id)->tweets;
 
-        return view ('layouts.userProfile', ['profiles' => $profiles, 'tweets' => $result]);
+        return view ('layouts.profile', ['profiles' => $profiles, 'tweets' => $result]);
 
     } else {
-        return view('layouts.userProfile');
+        return view('layouts.profile');
     }
 
     }
 
-    function editBio(Request $request) {
+    function editProfile(Request $request) {
 
             $profiles = \App\Profile::find(Auth::user()->id);
             $profiles->username = $request->username;
             $profiles->location = $request->location;
-            $profiles->bio = $request->content;
+            $profiles->bio = $request->bio;
 
 
-            return view ('layouts.editBio', ['profiles' => $profiles]);
+            return view ('layouts.editProfile', ['profiles' => $profiles]);
 
     }
 
 
-    function updateBio(Request $request)  {
+    function updateProfile(Request $request)  {
         if(Auth::check()) {
 
         $profiles = \App\Profile::find(Auth::user()->id);
         $profiles->username = $request->username;
         $profiles->location = $request->location;
-        $profiles->bio = $request->content;
+        $profiles->bio = $request->bio;
 
         $profiles->save();
 
         $result = \App\User::find(Auth::user()->id)->tweets;
 
-             return view ('layouts.userProfile', ['profiles' => $profiles, 'tweets' => $result]);
+             return view ('layouts.profile', ['profiles' => $profiles, 'tweets' => $result]);
 
         } else {
             return redirect('/home');
