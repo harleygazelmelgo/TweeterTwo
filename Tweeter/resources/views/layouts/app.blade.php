@@ -29,7 +29,7 @@
 
                 <div class="container">
                     <div class="navbar-brand">
-                        {{-- <img src="{{ url('/http://cdn.onlinewebfonts.com/svg/img_388050.png') }}"><img> --}}
+
                         <a href="{{ url('/') }}" class="navbar-item">{{ config('app.name', 'Tweeter') }}</a>
 
                         <div class="navbar-burger burger" data-target="navMenu">

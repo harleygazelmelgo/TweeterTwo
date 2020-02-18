@@ -64,11 +64,11 @@
 
             <br>
 
-            <form action="/tweetfeeds" method="get">
+            <form action="/tweetfeeds/commentsTweet" method="get">
                 @csrf
                 <input type="hidden" name="tweet_id" value="{{$tweet->id}}">
                 <textarea name="content" rows="4" cols="40"></textarea><br>
-                <input type="submit" value="Comment">
+                <input type="submit" value="Comment Tweet">
 
             </form>
 

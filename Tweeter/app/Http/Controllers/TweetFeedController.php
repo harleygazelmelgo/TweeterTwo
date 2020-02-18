@@ -121,9 +121,9 @@ class TweetFeedController extends Controller
     function commentsTweet(Request $request) {
         if(Auth::check()) {
         $comments = new \App\Comments();
+        $comments->user_id = Auth::user()->id;
         $comments->tweet_id = $request->tweet_id;
         $comments->content = $request->content;
-        $comments->user_id = Auth::user()->id;
         $comments->save();
 
 

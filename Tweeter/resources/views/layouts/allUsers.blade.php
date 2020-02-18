@@ -34,7 +34,7 @@
 
         @if (checkFollowing($user->id, Auth::user()->follow_relationship))
             <p> Already following! </p>
-            <form action="/followerprofiles/UnfollowUsers" method="get">
+            <form action="/followerprofiles/UnfollowUsers" method="get" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="user_id" value="{{$user->id}}">
                 <input type="submit" class="pull-right btn btn-small" value="Unfollow">
