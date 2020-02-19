@@ -7,7 +7,7 @@
 
     <div class="block">
         <div class="box">
-            <div class="box" style ="background-color:#85B8CB">
+            <div class="box" style ="background-color:#6cffff">
 
         <h1 class="title is-medium">Welcome {{ Auth::user()->name }}</h1>
         <br>

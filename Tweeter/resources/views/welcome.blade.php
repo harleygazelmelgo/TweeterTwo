@@ -106,7 +106,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    {{-- <img src="http://cdn.onlinewebfonts.com/svg/img_388050.png" style="width:180px; height:150px; float:center; "><img> --}}
+                    <img src="http://cdn.onlinewebfonts.com/svg/img_388050.png" style="width:180px; height:150px; float:center; "><img>
                     <h1 class="title is-1"> TWEETER </h1>
                     <h2 class="subtitle is-6"> See what's happening in the world right now. </h2>
 

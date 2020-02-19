@@ -4,31 +4,40 @@
     @guest
         <p>No Tweets available for you!</p>
     @else
-        <h1>{{ Auth::user()->name }}</h1>
-        <br><br>
+
+    <div class="container">
+        <div class="box" style ="background-color:#85B8CB">
+            <div class="card-title">
+        <h1 class="title is-5">Welcome {{ Auth::user()->name }}</h1>
+        <br>
+        <p>Edit Comments Tweet!</p>
+        <br>
 
 
-        @foreach ($tweet->comments as $comments)
-                <p><strong> {{$comments->user->name}}</strong></p>
-                <p>{{$comments->content}}</p>
+        <form action="/tweetfeeds/editComments/{{$comments->id}}" method="get" enctype="multipart/form-data">
+            @csrf
 
-            @endforeach
-
+            <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+            <br>
+            <input type="hidden" name="id" value="{{$comments->id}}">
             <br>
 
-            {{-- <form action="/profile" method="get">
-                @csrf
-                <input type="hidden" name="tweet_id" value="{{$tweet->id}}">
-                <input type="hidden" name="content" value="Content">
-                <input type="submit" value="EditComment">
-            </form> --}}
+            <textarea class="form-control z-depth-1"  rows="4" cols="93" type="text" name="content">{{$comments-> content}}</textarea>
+            <br><br>
 
+            <button type="submit" class="btn btn-primary">Update Comments</button>
 
+        </form>
 
+        @if($errors->any())
+            @foreach ($errors->all as $error)
 
-        @endforeach
+            @endforeach
+        @endif
 
 
 
     @endguest
 @endsection
+
+

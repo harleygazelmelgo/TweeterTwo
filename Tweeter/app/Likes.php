@@ -12,7 +12,7 @@ class Likes extends Model
         return $this->belongsTo('App\User');
     }
 
-    function tweet() {
+    function tweets() {
         return $this->belongsTo('App\Tweet');
     }
 }

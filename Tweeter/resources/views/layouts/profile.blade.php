@@ -8,7 +8,7 @@
         <p>No Tweets available for you!</p>
     @else
 
-    <div class="box" style="background-color:#85B8CB">
+    <div class="box" style="background-color:#6cffff">
 
            <p><strong> {{ Auth::user()->name }}</strong></p>
            <p> {{ $profiles->username }} </p>

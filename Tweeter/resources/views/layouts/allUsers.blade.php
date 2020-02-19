@@ -20,7 +20,7 @@
     <br>
 
 <div class="container">
-    <div class="box" style="background-color:#85B8CB">
+    <div class="box" style="background-color:#6cffff">
         <h1 class="title is-5">Followers</h1>
 
         <div class="box-heading" >

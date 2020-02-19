@@ -114,10 +114,12 @@ class TweetFeedController extends Controller
 
         } else {
 
-            return redirect('/home');
+            return redirect('layouts.tweetfeeds');
         }
 
     }
+
+
 
     function DeleteCommentsTweet (Request $request) {
 
@@ -129,40 +131,25 @@ class TweetFeedController extends Controller
     }
 
 
-    function editComments(Request $request) {
-        $comments = \App\Comments::find($request->get('comments_id'));
-        $comments->content = $request->content;
-
-        return view ('layouts.editComments', ['comments' => $comments]);
-
-    }
-
-    // function updateComments(Request $request) {
-    //     if(Auth::check()) {
+    // function editComments(Request $request) {
+    //     $comments = \App\Comments::where('tweet_id', $request->user_id)->get();
+    //     $comments->content = $request->content;
     //     $tweet = \App\Tweet::find($request->id);
-    //     $tweet->content = $request->content;
-    //     $tweet->save();
 
-    //     $result = \App\Tweet::all();
-    //     return view ('layouts.tweetfeeds', ['tweets' => $result]);
-
-    //     } else {
-    //         return redirect('/home');
-    //     }
+    //     return view ('layouts.editComments', ['comments' => $comments, 'tweet' => $tweet]);
 
     // }
 
 
-    function likesTweet(Request $request) {
+    function editComments(Request $request) {
         if(Auth::check()) {
-        $likes = \App\Likes::find($request->id);
-        $likes->user_id = Auth::user()->id;
-        $likes->tweet_id = $request->tweet_id;
-        $likes->save();
+        $comments = \App\Comments::find($request->id);
+        $comments->user_id = $request->user_id;
+        $comments->content = $request->content;
+        $comments->save();
 
-
-        $result = \App\User::find(Auth::user()->id)->tweets;
-             return view ('layouts.tweetfeeds', ['likes' => $likes, 'tweets' => $result]);
+        $result = \App\Comments::all();
+        return view ('layouts.tweetfeeds', ['comments' => $result]);
 
         } else {
             return redirect('/home');
@@ -171,13 +158,27 @@ class TweetFeedController extends Controller
     }
 
 
+    function likesTweet(Request $request) {
+        $find = \App\Likes::where('user_id', Auth::user()->id)->where('tweet_id', $request->tweet_id)->get();
+        if(Auth::check()) {
+            if (sizeOf($find)==0) {
+                $likes = new \App\Likes;
+                $likes->user_id = Auth::user()->id;
+                $likes->tweet_id = $request->tweet_id;
+                $likes->save();
 
+                $result = \App\Tweet::all();
+                return view('tweetfeeds', ['tweets' => $result]);
 
+            } else {
 
+                $result = \App\Tweet::all();
+                return view('tweetfeeds', ['tweets' => $result]);
+            }
 
+        }
 
-
-
+    }
 
 
 }

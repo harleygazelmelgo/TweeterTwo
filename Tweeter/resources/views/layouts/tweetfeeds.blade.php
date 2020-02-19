@@ -9,7 +9,8 @@
     @else
     <br>
     <div class="container">
-        <div class="box" style ="background-color:#85B8CB">
+
+        <div class="box" style ="background-color:#6cffff">
             <div class="card-title">
                 <h1 class="title is-5">{{ Auth::user()->name }}</h1>
 
@@ -76,15 +77,12 @@
                     <input type="submit" value="Delete Comment">
                 </form>
 
-                <form  action="/tweetfeeds/editComments" method="post">
+                <form  action="/tweetfeeds/editComments" method="get">
                     @csrf
                     <input type="hidden" name="user_id" value="{{$tweet->id}}">
                     <input type="hidden" name="content" value="Content">
                     <input type="submit" value="Edit Comments">
                 </form>
-
-
-
 
 
 
@@ -97,6 +95,7 @@
 
 
             </div>
+        </div>
 
         </div>
 

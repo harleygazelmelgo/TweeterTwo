@@ -52,7 +52,9 @@ Route::get('/tweetfeeds/commentsTweet', 'TweetFeedController@commentsTweet');
 
 Route::get('/tweetfeeds/DeleteCommentsTweet', 'TweetFeedController@DeleteCommentsTweet');
 
-Route::post('/tweetfeeds/editComments', 'TweetFeedController@editComments');
+Route::get('/tweetfeeds/editComments', 'TweetFeedController@editComments');
+
+
 
 
 
