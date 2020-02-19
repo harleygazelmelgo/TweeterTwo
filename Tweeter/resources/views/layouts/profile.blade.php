@@ -44,23 +44,6 @@
 
 </div>
 
-<div class="block">
-    <nav class="pagination">
-        <a href="" class="pagination-previous" disabled>Previous</a>
-        <a href="" class="pagination-next">Next Page</a>
-        <ul class="pagination-list">
-            <li>
-                <a href="" class="pagination-link is current">1</a>
-            </li>
-            <li>
-                <a href="" class="pagination-link is current">2</a>
-            </li>
-            <li>
-                <a href="" class="pagination-link is current">3</a>
-            </li>
-        </ul>
-    </nav>
 
-</div>
 
 @endsection

@@ -45,14 +45,14 @@ Route::get('/followerprofiles/followUsers', 'TweetFeedController@followUsers');
 Route::get('/followerprofiles/UnfollowUsers', 'TweetFeedController@UnfollowUsers');
 
 
-// Route::post('/tweetfeeds/likes', 'TweetFeedController@likesTweet');
 
+Route::post('/tweetfeeds/likesTweet', 'TweetFeedController@likesTweet');
 
 Route::get('/tweetfeeds/commentsTweet', 'TweetFeedController@commentsTweet');
 
 Route::get('/tweetfeeds/DeleteCommentsTweet', 'TweetFeedController@DeleteCommentsTweet');
 
-// Route::post('/tweetfeeds/EditCommentsTweet', 'TweetFeedController@EditCommentsTweet');
+Route::post('/tweetfeeds/editComments', 'TweetFeedController@editComments');
 
 
 

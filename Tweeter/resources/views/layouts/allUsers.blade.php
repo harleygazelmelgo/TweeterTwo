@@ -28,7 +28,7 @@
 
         @foreach ($users as $user)
             <br>
-            <p><strong> {{$user->name}} </strong></p>
+            <p><strong> <a href="/profile">{{$user->name}}</a> </strong></p>
             <p><strong> {{$user->profile->username}} </strong></p>
 
 
@@ -62,7 +62,7 @@
 
 </div>
 
-<div class="block">
+{{-- <div class="block">
     <nav class="pagination">
         <a href="" class="pagination-previous" disabled>Previous</a>
         <a href="" class="pagination-next">Next Page</a>
@@ -79,7 +79,7 @@
         </ul>
     </nav>
 
-</div>
+</div> --}}
 
 
 @endsection
