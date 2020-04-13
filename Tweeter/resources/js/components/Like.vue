@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>{{tweet_id}}</h3>
-        <h1 v-if="checkTweet()">You've like this tweet</h1>
+        <h1 v-if="checkTweet()">You've like this tweet!</h1>
         <h1 v-else>Like this tweet!</h1>
     </div>
 </template>
@@ -13,7 +13,7 @@ export default {
         return {
             likeslist: [],
             state: {
-                d,efault: false,
+                default: false,
             }
         }
     },

@@ -17,8 +17,6 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
 
-
-
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 

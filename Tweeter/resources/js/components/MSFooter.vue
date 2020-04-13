@@ -1,8 +1,7 @@
 <template>
   <div class="footer-container">
-        <h1> 2020 Tweeter, Inc. </h1>
+        <h1> Copyright 2020 Tweeter, Inc. </h1>
   </div>
-
 
 
 </template>
@@ -20,8 +19,7 @@ export default {
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: #003F91;
-        color: white;
+        background-color: #81C14B;
         text-align: center;
 
     }
@@ -29,7 +27,7 @@ export default {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 1rem;
         text-align: center;
-        color: yellow;
+        color: #246EB9;
         margin-bottom: 20px;
     }
 

@@ -1,38 +1,40 @@
 <template>
     <div class="body-container">
-        <div id='top-center'>
-            <h1><strong> An amazing APP that does it ALL! </strong></h1>
-            <img src="images/logo.png" style="width:500px; height:500px" alt="tweetbody-logo">
-            <h3 id="topL1"><strong> Get more #followers  </strong></h3>
-            <h3 id="topR1"><strong> Build #connections </strong></h3>
-            <h3 id="bottomL2"><strong> Increase #engagement </strong></h3>
-            <h3 id="bottomR2"><strong> Expand your #brand </strong></h3>
+        <div id="body-top-container">
+            <br>
+            <h1 id="head"><strong> An amazing APP that does it ALL! </strong></h1>
+            <br>
+            <h4 id="topL1"> Get more #followers  </h4>
+            <h4 id="topR1"> Build #connections </h4>
+            <img src="images/logo.png" style="width:450px; height:450px" alt="tweetbody-logo">
+            <h4 id="bottomL2">Increase #engagement </h4>
+            <h4 id="bottomR2"> Expand your #brand </h4>
         </div>
 
-        <div id="body-para">
-            <p id="para"> "We find ways in connecting people”, that's the objective of the Tweeter founder, Ms. Lana Lang. Ms. Lang landed in New Jersey, USA in 1990.
-                She was an exchange student at HGM University.  Being a foreigh student and new to the country she was having a hard time coping up the homesickness.
-                So 1993, on her last year as a Computer Science student in the university she came up with an idea of making an app that would connect people from different part of the world.
+        <div id="body-para-container">
+            <p> "We find ways in connecting people”, that's the objective of the Tweeter founder, Ms. Lana Lang. Ms. Lang landed in New Jersey, USA in 1990.
+                She was an exchange student at HGM University.  Being a foreigh student and new to the country she was having a hard time coping up with homesickness.
+                So  in 1993, on her last year as a Computer Science student in the university she came up with an idea of making an app that would connect people from different parts of the world.
                 Together with her two best friends, they founded Tweeter.
-
-                Today Tweeter, has been widely use worldwide and it has a 10 million users.
+            
             </p>
 
+            <p> Today Tweeter, has been widely use worldwide and it has a 10 million users and counting.</p>
 
         </div>
 
-        <div class="grid">
-            <div class="col-3">
+        <div class="body-col-container">
+            <div id="card-content-1">
                 <h4>How to get more followers on Tweeter</h4>
                 <ul >
                     <li>Promote your dedicated hashtag on your social profiles.</li>
                     <li>Get creative with your hashtag. Be funny, ironic or outrageous - but never boring.</li>
                     <li>Interact with top influencers in your space and try to be their favorite brand.</li>
-                    <li>Use to call to action to tell people what you want them to do with your posts. Find clever ways to get people to share your content.</li>
+                    <li>Find clever ways to get people to share your content.</li>
                 </ul>
             </div>
 
-            <div class="col-3">
+            <div id="card-content-2">
                 <h4>Ways to build connections on Tweeter</h4>
                 <ul >
                     <li>Use emotions to make your content reach more people.</li>
@@ -43,7 +45,7 @@
                 </ul>
             </div>
 
-            <div class="col-3">
+            <div id="card-content-3">
                 <h4>Strategies to Increase your Tweeter Engagement</h4>
                 <ul >
                     <li>Engage with other users content.</li>
@@ -57,7 +59,7 @@
                 </ul>
             </div>
 
-            <div class="col-3">
+            <div id="card-content-4">
                 <h4>How to get more followers on Tweeter</h4>
                 <ul >
                     <li>Share good content content consistently.</li>
@@ -84,6 +86,81 @@ export default {
 
 
 <style scoped>
+
+.body-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        padding: 10px;
+            
+}
+
+#body-top-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        justify-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        margin: 10px;
+}
+
+#body-para-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;              
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        text-align: left;
+        margin: 10px;
+}
+
+.body-col-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;              
+        margin: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+}
+
+#card-content-1 {
+        margin-left: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        text-align: left;
+    
+    
+    
+}
+
+#card-content-2 {
+        margin-left: 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        text-align: left;
+    
+    
+}
+
+#card-content-3 {
+        margin-left: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        text-align: left;
+    
+}
+
+#card-content-4 {
+        margin-left: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        text-align: left;
+    
+}
+
+
 
 
 </style>
