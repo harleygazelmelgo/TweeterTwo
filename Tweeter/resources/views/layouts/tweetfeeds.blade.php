@@ -49,7 +49,8 @@
             <form  action="/tweetfeeds/likesTweet" method="post">
                 @csrf
                     <input type="hidden" name="user_id" value="{{$tweet->id}}">
-                    <input type="submit" value="Like">
+                    {{-- <input type="submit" value="Like"> --}}
+                    <button  @click="likebtn">Like</button>
             </form>
 
 
