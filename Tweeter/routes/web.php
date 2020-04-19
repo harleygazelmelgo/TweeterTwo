@@ -56,7 +56,7 @@ Route::get('/tweetfeeds/editComments', 'TweetFeedController@editComments');
 
 
 
-Route::get('/go-home', 'GoHomeController@goHome');
+
 
 
 
