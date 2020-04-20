@@ -30,7 +30,7 @@ export default {
         left: 0;
         top: 0;
         width: 100%;
-        background-color: #81C14B;
+        background-color: #00D1B2;
 
     }
     h3 {

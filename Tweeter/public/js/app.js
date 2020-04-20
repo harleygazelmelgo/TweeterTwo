@@ -6708,7 +6708,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.footer-container[data-v-7276bfac] {\n    position: fixed;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    background-color: #81C14B;\n    text-align: center;\n}\nh1[data-v-7276bfac] {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    font-size: 1rem;\n    text-align: center;\n    color: #246EB9;\n    margin-bottom: 20px;\n}\n\n", ""]);
+exports.push([module.i, "\n.footer-container[data-v-7276bfac] {\n    position: fixed;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    background-color: #00D1B2;\n    text-align: center;\n}\nh1[data-v-7276bfac] {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    font-size: 1rem;\n    text-align: center;\n    color: #246EB9;\n    margin-bottom: 20px;\n}\n\n", ""]);
 
 // exports
 
@@ -6727,7 +6727,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.header-container[data-v-d8adb8c4] {\n    position: fixed;\n    left: 0;\n    top: 0;\n    width: 100%;\n    background-color: #81C14B;\n}\nh3[data-v-d8adb8c4] {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    font-size: 2rem;\n    color: #246EB9;\n    text-align: left;\n    margin-left: 10px;\n}\n#btn[data-v-d8adb8c4] {\n    margin-left: 90vw;\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n}\n\n   \n\n", ""]);
+exports.push([module.i, "\n.header-container[data-v-d8adb8c4] {\n    position: fixed;\n    left: 0;\n    top: 0;\n    width: 100%;\n    background-color: #00D1B2;\n}\nh3[data-v-d8adb8c4] {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    font-size: 2rem;\n    color: #246EB9;\n    text-align: left;\n    margin-left: 10px;\n}\n#btn[data-v-d8adb8c4] {\n    margin-left: 90vw;\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n}\n\n   \n\n", ""]);
 
 // exports
 
