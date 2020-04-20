@@ -48,6 +48,8 @@ Route::get('/followerprofiles/UnfollowUsers', 'TweetFeedController@UnfollowUsers
 
 Route::post('/tweetfeeds/likesTweet', 'TweetFeedController@likesTweet');
 
+Route::post('/tweetfeeds/UnlikeTweet', 'TweetFeedController@UnlikeTweet');
+
 Route::get('/tweetfeeds/commentsTweet', 'TweetFeedController@commentsTweet');
 
 Route::get('/tweetfeeds/DeleteCommentsTweet', 'TweetFeedController@DeleteCommentsTweet');

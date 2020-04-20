@@ -180,6 +180,18 @@ class TweetFeedController extends Controller
 
     }
 
+    function UnlikeTweet(Request $request) {
+        $likeUsers = \App\Like::where('user_id', Auth::user()->id)->where('tweet_id', $request->tweetId)->get();
+        if(sizeof($likeUsers)>0) {
+            foreach ($likeUsers as $likeUser) {
+                \App\Like::destroy($likeUser->id);
+            }
+        }
+        $result = \App\Tweet::all();
+        return view('tweetfeeds', ['tweets' => $result]);
+    }
+
+
 
 }
 

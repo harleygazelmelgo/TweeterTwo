@@ -25,6 +25,10 @@
 
 
         @foreach ($tweets as $tweet)
+            @php
+                $count = sizeOf(\App\Tweet::find($tweet->id)->likes);
+            @endphp
+            
             <p><strong> {{$tweet->user->name}}</strong></p>
             <p><strong> {{$tweet->user->profile->username}}</strong></p>
             <p>{{$tweet->content}}</p>
