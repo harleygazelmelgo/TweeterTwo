@@ -58,13 +58,6 @@ Route::get('/tweetfeeds/editComments', 'TweetFeedController@editComments');
 
 
 
-
-
-
-
-
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
