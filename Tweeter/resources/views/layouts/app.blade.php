@@ -8,28 +8,21 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Tweeter') }} {{ app()->version() }}</title>
+        <title>{{ config('app.name', 'TWEETER') }} {{ app()->version() }}</title>
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
-
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
 
     </head>
     <body>
         <div id="app">
             <nav class="navbar has-shadow">
-
                 <div class="container">
                     <div class="navbar-brand">
-
-                        <a href="{{ url('/') }}" class="navbar-item">{{ config('app.name', 'Tweeter') }}</a>
-
+                        <a href="{{ url('/') }}" class="navbar-item">{{ config('app.name', 'TWEETER') }}</a>
                         <div class="navbar-burger burger" data-target="navMenu">
                             <span></span>
                             <span></span>
@@ -37,7 +30,7 @@
                         </div>
                     </div>
 
-                    <div class="navbar-menu" id="navMenu">
+                    <div class="navbar-menu is active" id="navMenu">
                         <div class="navbar-start"></div>
 
                         <div class="navbar-end">
@@ -58,11 +51,9 @@
                                             {{ csrf_field() }}
                                         </form>
 
-                                        <a href="/profile" class="button is-white is-small">profile</a><br>
-                                        <a href="/tweetfeeds"class="button is-white is-small"> tweetfeeds</a><br>
-                                        <a href="/followerprofiles" class="button is-white is-small">followerprofiles</a>
-
-
+                                        <a class="navbar-item" href="/profile" class="button is-white is-small">Profile</a><br>
+                                        <a class="navbar-item" href="/tweetfeeds"class="button is-white is-small"> Tweetfeeds</a><br>
+                                        <a class="navbar-item" href="/followerprofiles" class="button is-white is-small">Follower Profiles</a>
 
                                     </div>
                                 </div>

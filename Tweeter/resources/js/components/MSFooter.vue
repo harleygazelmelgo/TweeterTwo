@@ -19,15 +19,17 @@ export default {
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: #00D1B2;
+        background-color: #D5CDCB;
         text-align: center;
+
+
 
     }
     h1 {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 1rem;
         text-align: center;
-        color: #246EB9;
+        color: #99999999;
         margin-bottom: 20px;
     }
 

@@ -5,11 +5,11 @@
         </div>
 
         <div >
-                       
-            <a id="btn" href="/login" class="btn btn-primary">Login</a>
-                        
+
+            <a id="btn" href="/login" class="button is-primary is-small">Login</a>
+
         </div>
-        
+
 
     </div>
 
@@ -30,13 +30,13 @@ export default {
         left: 0;
         top: 0;
         width: 100%;
-        background-color: #00D1B2;
+        background-color: #FF4D7D;
 
     }
     h3 {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 2rem;
-        color: #246EB9;
+        color: #0066FF;
         text-align: left;
         margin-left: 10px;
 
@@ -45,10 +45,10 @@ export default {
     #btn {
         margin-left: 90vw;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
-    
+
+
     }
 
-       
+
 
 </style>

@@ -22,7 +22,7 @@
             <br>
             <label for="content">Content: </label>
             <br>
-            <textarea name="content" rows="10" cols="50"></textarea>
+            <textarea name="content" rows="10" cols="40"></textarea>
             <br><br>
 
             <button type="submit" class="btn btn-primary">Update Tweet</button>

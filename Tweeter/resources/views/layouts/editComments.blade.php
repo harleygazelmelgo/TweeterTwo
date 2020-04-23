@@ -6,7 +6,7 @@
     @else
 
     <div class="container">
-        <div class="box" style ="background-color:#85B8CB">
+        <div class="card" style ="background-color:#85B8CB">
             <div class="card-title">
         <h1 class="title is-5">Welcome {{ Auth::user()->name }}</h1>
         <br>
@@ -22,7 +22,7 @@
             <input type="hidden" name="id" value="{{$comments->id}}">
             <br>
 
-            <textarea class="form-control z-depth-1"  rows="4" cols="93" type="text" name="content">{{$comments-> content}}</textarea>
+            <textarea class="form-control z-depth-1"  rows="4" cols="40" type="text" name="content">{{$comments-> content}}</textarea>
             <br><br>
 
             <button type="submit" class="btn btn-primary">Update Comments</button>
