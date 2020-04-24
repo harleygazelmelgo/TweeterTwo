@@ -2,14 +2,8 @@
     <div class='header-container'>
         <div id='top-left'>
              <h3> TWEETER </h3>
+             <a id="btn" href="/login" class="button is-primary is-small">Login</a>
         </div>
-
-        <div >
-
-            <a id="btn" href="/login" class="button is-primary is-small">Login</a>
-
-        </div>
-
 
     </div>
 

@@ -7,7 +7,7 @@
     @else
 
         <div class="block">
-            <div class="card-head" style="background-color:#FF3169" >
+            <div class="card-head" style="background-color:#6cffff" >
                 <br>
                 <h1><strong> {{ Auth::user()->name }}</strong></h1>
                 <p> {{ $profiles->username }} </p>
@@ -24,7 +24,7 @@
 
                 <hr>
 
-                    <div class="card-content" style="background-color:#6cffff">
+                    <div class="card-content">
 
                         @foreach ($tweets as $tweet)
 
