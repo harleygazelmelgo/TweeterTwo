@@ -13,9 +13,9 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        
-        
-        
+
+
+
         <!-- Styles -->
 
         <style>
@@ -26,7 +26,7 @@
         <div id='app'>
             <Root />
 
-           
+
 
         </div>
 
@@ -34,7 +34,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
-        <script src="{{ 'js/app.js'}}"></script>
+        <script src="/js/app.js"></script>
         <!-- <script src="{{ 'mybody.js' }}"></script> -->
 
     </body>

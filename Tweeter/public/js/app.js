@@ -2048,6 +2048,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'MSBody'
 });
@@ -2086,12 +2087,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -6689,7 +6684,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.body-container[data-v-0d685b1a] {\n        display: grid;\n        grid-template-columns: auto;\n        grid-template-rows: auto auto auto;\n        padding: 10px;\n}\n#body-top-container[data-v-0d685b1a] {\n        display: grid;\n        grid-template-columns: auto;\n        grid-template-rows: auto auto;\n        -webkit-box-pack: center;\n                justify-content: center;\n        justify-items: center;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        margin: 10px;\n}\n#body-para-container[data-v-0d685b1a] {\n        display: grid;\n        grid-template-columns: 1fr;\n        grid-template-rows: 1fr;              \n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        text-align: left;\n        margin: 10px;\n}\n.body-col-container[data-v-0d685b1a] {\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n        grid-template-rows: 1fr 1fr;              \n        margin: 10px;\n        padding: 10px;\n        box-sizing: border-box;\n}\n#card-content-1[data-v-0d685b1a] {\n        margin-left: 10px;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        text-align: left;\n}\n#card-content-2[data-v-0d685b1a] {\n        margin-left: 40px;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        text-align: left;\n}\n#card-content-3[data-v-0d685b1a] {\n        margin-left: 10px;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        text-align: left;\n}\n#card-content-4[data-v-0d685b1a] {\n        margin-left: 50px;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        text-align: left;\n}\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.body-container[data-v-0d685b1a] {\n        display: grid;\n        grid-template-columns: auto;\n        grid-template-rows: auto auto auto;\n        padding: 10px;\n}\n.body-container[data-v-0d685b1a] {\n        display: grid;\n        grid-template-columns: auto;\n        grid-template-rows: auto auto;\n        -webkit-box-pack: center;\n                justify-content: center;\n        justify-items: center;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        margin: 10px;\n}\n.body-para-container[data-v-0d685b1a] {\n        display: grid;\n        grid-template-columns: 1fr;\n        grid-template-rows: 1fr;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        text-align: left;\n        margin: 10px;\n}\n.body-col-container[data-v-0d685b1a] {\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n        grid-template-rows: 1fr 1fr;\n        margin: 10px;\n        padding: 10px;\n        box-sizing: border-box;\n}\n#content-1[data-v-0d685b1a] {\n        margin-left: 10px;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        text-align: left;\n}\n#content-2[data-v-0d685b1a] {\n        margin-left: 40px;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        text-align: left;\n}\n#content-3[data-v-0d685b1a] {\n        margin-left: 10px;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        text-align: left;\n}\n#content-4[data-v-0d685b1a] {\n        margin-left: 50px;\n        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        font-size: 1rem;\n        text-align: left;\n}\n\n\n\n\n", ""]);
 
 // exports
 
@@ -38346,7 +38341,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "body-container" }, [
-      _c("div", { attrs: { id: "body-top-container" } }, [
+      _c("div", { staticClass: "body-top-container" }, [
         _c("br"),
         _vm._v(" "),
         _c("h1", { attrs: { id: "head" } }, [
@@ -38375,10 +38370,10 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { attrs: { id: "body-para-container" } }, [
+      _c("div", { staticClass: "body-para-container" }, [
         _c("p", [
           _vm._v(
-            " \"We find ways in connecting people”, that's the objective of the Tweeter founder, Ms. Lana Lang. Ms. Lang landed in New Jersey, USA in 1990.\n            She was an exchange student at HGM University.  Being a foreigh student and new to the country she was having a hard time coping up with homesickness.\n            So  in 1993, on her last year as a Computer Science student in the university she came up with an idea of making an app that would connect people from different parts of the world.\n            Together with her two best friends, they founded Tweeter.\n        \n        "
+            " \"We find ways in connecting people”, that's the objective of the Tweeter founder, Ms. Lana Lang. Ms. Lang landed in New Jersey, USA in 1990.\n            She was an exchange student at HGM University.  Being a foreigh student and new to the country she was having a hard time coping up with homesickness.\n            So  in 1993, on her last year as a Computer Science student in the university she came up with an idea of making an app that would connect people from different parts of the world.\n            Together with her two best friends, they founded Tweeter.\n\n        "
           )
         ]),
         _vm._v(" "),
@@ -38390,85 +38385,91 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "body-col-container" }, [
-        _c("div", { attrs: { id: "card-content-1" } }, [
-          _c("h4", [_vm._v("How to get more followers on Tweeter")]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [
-              _vm._v("Promote your dedicated hashtag on your social profiles.")
-            ]),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-2", attrs: { id: "content-1" } }, [
+            _c("h4", [_vm._v("How to get more followers on Tweeter")]),
             _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "Get creative with your hashtag. Be funny, ironic or outrageous - but never boring."
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "Interact with top influencers in your space and try to be their favorite brand."
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("Find clever ways to get people to share your content.")
+            _c("ul", [
+              _c("li", [
+                _vm._v(
+                  "Promote your dedicated hashtag on your social profiles."
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _vm._v(
+                  "Get creative with your hashtag. Be funny, ironic or outrageous - but never boring."
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _vm._v(
+                  "Interact with top influencers in your space and try to be their favorite brand."
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _vm._v("Find clever ways to get people to share your content.")
+              ])
             ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { attrs: { id: "card-content-2" } }, [
-          _c("h4", [_vm._v("Ways to build connections on Tweeter")]),
+          ]),
           _vm._v(" "),
-          _c("ul", [
-            _c("li", [
-              _vm._v("Use emotions to make your content reach more people.")
+          _c("div", { staticClass: "col-2", attrs: { id: "content-2" } }, [
+            _c("h4", [_vm._v("Ways to build connections on Tweeter")]),
+            _vm._v(" "),
+            _c("ul", [
+              _c("li", [
+                _vm._v("Use emotions to make your content reach more people.")
+              ]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Slide into direct messages (DM).")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Go Ham on HASHTAGS!")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Tag a friend.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Explore and Discover.")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-2", attrs: { id: "content-3" } }, [
+            _c("h4", [
+              _vm._v("Strategies to Increase your Tweeter Engagement")
             ]),
             _vm._v(" "),
-            _c("li", [_vm._v("Slide into direct messages (DM).")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Go Ham on HASHTAGS!")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Tag a friend.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Explore and Discover.")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { attrs: { id: "card-content-3" } }, [
-          _c("h4", [_vm._v("Strategies to Increase your Tweeter Engagement")]),
+            _c("ul", [
+              _c("li", [_vm._v("Engage with other users content.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Retweet other users’ Tweets.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Share a variety of Links.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Always use Hashtags.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Don’t tweet too much.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Use clean and straight forward language.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Ask questions.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Retweet great content.")])
+            ])
+          ]),
           _vm._v(" "),
-          _c("ul", [
-            _c("li", [_vm._v("Engage with other users content.")]),
+          _c("div", { attrs: { id: "content-4", clas: "col-2" } }, [
+            _c("h4", [_vm._v("How to get more followers on Tweeter")]),
             _vm._v(" "),
-            _c("li", [_vm._v("Retweet other users’ Tweets.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Share a variety of Links.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Always use Hashtags.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Don’t tweet too much.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Use clean and straight forward language.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Ask questions.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Retweet great content.")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { attrs: { id: "card-content-4" } }, [
-          _c("h4", [_vm._v("How to get more followers on Tweeter")]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [_vm._v("Share good content content consistently.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Monitor hashtag in your market.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Hold a contest with another account.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Don’t buy followers.")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Promote your account.")])
+            _c("ul", [
+              _c("li", [_vm._v("Share good content content consistently.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Monitor hashtag in your market.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Hold a contest with another account.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Don’t buy followers.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Promote your account.")])
+            ])
           ])
         ])
       ])
@@ -38538,10 +38539,8 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "header-container" }, [
       _c("div", { attrs: { id: "top-left" } }, [
-        _c("h3", [_vm._v(" TWEETER ")])
-      ]),
-      _vm._v(" "),
-      _c("div", [
+        _c("h3", [_vm._v(" TWEETER ")]),
+        _vm._v(" "),
         _c(
           "a",
           {
